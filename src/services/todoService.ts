@@ -4,7 +4,7 @@ import { z } from "zod";
 const validationSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().optional(),
-  completed: z.string().optional(),
+  completed: z.boolean().optional(),
 });
 
 export class TodoService {
